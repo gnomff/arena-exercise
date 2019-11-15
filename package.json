@@ -1,0 +1,27 @@
+{
+  "name": "arena-exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gnomff/arena-exercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gnomff/arena-exercise/issues"
+  },
+  "homepage": "https://github.com/gnomff/arena-exercise#readme",
+  "dependencies": {
+    "highland": "^2.13.5",
+    "js-combinatorics": "^0.5.4",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
