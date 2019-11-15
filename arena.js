@@ -61,10 +61,10 @@ arena.main = (stream, threshold = 50) =>
   //reduce the stream of lists of pairs into a single memoized object, incrementing each key by one per line
   //[[a,b], [a,c], [b,c]] -> {'a,b': 1, 'a,c': 1, 'b,c': 1}
   //[[a,b], [a,c]] -> {'a,b': 2, 'a,c': 2, 'b,c': 1}
-  .reduce({}, (acc, line) => fp.reduce((result, value) => upsert(result, fp.join(',', value), 1), acc, line))
+  .reduce({}, (totalObj, pairs) => fp.reduce((lineObj, pair) => upsert(lineObj, fp.join(',', pair), 1), totalObj, pairs))
   //map the resulting dictionary to a list, stripping out any key/vals where the val < threshold
   .map(counts => reduce((result, v, k) => v >= threshold ? fp.concat(result, k) : result, [])(counts))
-  //take [[a],[b]] -> stream(a,b)
+  //[[a],[b]] -> stream(a,b)
   .flatMap(highland)
   
 
