@@ -2,9 +2,7 @@
 
 /**
  * index.js is the entry point for node programs. Everything in this file will be executed
- * if we try to `require` it, so we need to keep it seperate. This file is simply an entry point.
- * It provides the implementation of fs, and handles the parameters from the cli. We could
- * put the argument handling into `main` as well, but this is probably overkill.
+ * if we try to `require` it, so we need to keep it seperate.
  */
 
 
