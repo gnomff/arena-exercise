@@ -19,7 +19,7 @@
   "dependencies": {
     "highland": "^2.13.5",
     "js-combinatorics": "^0.5.4",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.19"
   },
   "devDependencies": {
     "jest": "^24.9.0",
